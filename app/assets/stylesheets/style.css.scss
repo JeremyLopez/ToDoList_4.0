@@ -1,0 +1,261 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+$color: #25DBFF;
+$textColor: white;//#858585;
+$boxColor: red;
+
+
+.test-div {
+	height: 100px;
+}
+
+
+
+
+
+
+#makeMeDraggable {
+	width: 300px; 
+	height: 300px; 
+	background: $boxColor;
+	
+	&.ui-draggable-dragging {
+		background: transparentize($boxColor, 0.5);		
+	}
+}
+
+#drag-here {
+	width: 300px;
+	height: 300px;
+	margin-top: 100px;
+	display: inline-block;
+	background: black;
+}
+
+.hovered {
+	background: white;
+}
+
+.sort-these {
+	display: block;
+	margin: 100px;
+}
+
+.sort-test {
+	padding: 0;
+}
+
+
+
+
+
+
+html {
+	background-color: $color;
+}
+
+input {
+	background-color: lighten($color, 20%);
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-bottom: 5px;
+//	border: solid black 2px;
+	border: none;
+	color: black;
+	outline: none;
+	border-radius: 7px;
+	&:focus {
+//		border: solid black 4px;
+		outline: none;
+//		line-height: 2;
+	}
+}
+
+.svg-hide {
+//	display: none;
+	visibility: hidden;
+}
+
+.svg-visible {
+	visibility: visible;
+}
+
+#squiggle {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	float: left;
+	margin: -11px 0 0 50px;
+	border: solid white;
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+svg { 
+	postion: absolute; 
+	stroke: $textColor;
+}
+
+.btn-success {
+	border-radius: 7px;
+	border: none;
+	background-color: complement($color);
+	
+	&:hover {
+		background-color: darken((complement($color)), 10%);
+	}
+	
+	&:active {
+		background-color: darken((complement($color)), 10%);
+		outline: none;
+	}
+	
+	&:focus {
+		background-color: darken((complement($color)), 10%);
+		outline: none;
+	}
+	
+	&:active:focus {
+		background-color: darken((complement($color)), 20%);
+		outline: none;
+	}
+}
+
+body {
+	font-size: 20px;
+	font-family: 'Lato';
+	max-width: 1000px;
+	margin: auto;
+	background-color: $color;
+}
+
+i {
+	cursor: pointer;
+}
+
+
+
+.task-container {
+	margin: 10px 0px 0px 0px;
+}
+
+.task-info {
+	display: inline;
+	float: right;
+	clear: none;
+	height: 68px;
+	margin-top: -11px;
+	line-height: 12px;
+	
+	> p {
+		font-size: 10px;
+		display: inline-block;
+		margin: 0;
+	}
+}
+
+.btn-success {
+	display: block;
+}
+
+.strike-it {
+	text-decoration: line-through;
+}
+
+form {
+	margin: 10px 0px 0px 0px;
+	> button {
+		margin: inherit;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+//	display: inline;
+//	padding-bottom: 10px;
+}
+
+.post-container {
+//	padding: 20px 20px;
+//	border: solid green 3px;
+	margin-bottom: 10px;
+	background-color: darken($color, 10%);
+	border-radius: 10px;
+	
+	> h3 {
+		display: inline;
+		color: $textColor;
+	}
+	
+	> p {
+		display: inline;
+		font-size: 0.5em;
+	}
+}
+
+.task-list-area {
+	padding: 0;
+}
+
+.complete-10 {
+//	border-color: #20eb59;
+	background-color: darken($color, 10%);
+}
+
+.complete-9 {
+//	border-color: #2edc53;
+	background-color: darken($color, 12%);
+}
+
+.complete-8 {
+//	border-color: #4abf48;
+	background-color: darken($color, 14%);
+}
+
+.complete-7 {
+//	border-color: #60a740;
+	background-color: darken($color, 16%);
+}
+
+.complete-6 {
+//	border-color: #749238;
+	background-color: darken($color, 18%);
+}
+
+.complete-5 {
+//	border-color: #8d792e;
+	background-color: darken($color, 20%);
+}
+
+.complete-4 {
+//	border-color: #ab5821;
+	background-color: darken($color, 22%);
+}
+
+.complete-3 {
+//	border-color: #c83a16;
+	background-color: darken($color, 24%);
+}
+
+.complete-2 {
+//	border-color: #db260e;
+	background-color: darken($color, 26%);
+}
+
+.complete-1 {
+//	border-color: #f30c04;
+	background-color: darken($color, 28%);
+}
+
+.complete-0 {
+//	border-color: #ff0000;
+	background-color: darken($color, 30%);
+}
+
+@for $i from 1 through 16 {
+  .hours-#{$i} { padding: 10px*$i 0px 10px*$i 0px }
+}
