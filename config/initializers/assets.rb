@@ -14,3 +14,5 @@ Rails.application.config.assets.precompile += %w( angular-dragula/dist/dragula.c
 Rails.application.config.assets.precompile += %w( angular-ui-sortable.js )
 Rails.application.config.assets.precompile += %w( angular-ui-router.js )
 Rails.application.config.assets.precompile += %w( angular-resource.js )
+Rails.application.config.assets.precompile += %w( angular-dragula.js )
+Rails.application.config.assets.precompile += %w( angular-dragula.css )
